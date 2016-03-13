@@ -12,6 +12,11 @@ body {
 	text-align: center;
 }
 
+#pres h1 {
+	font-size: 18px;
+	font-weight: normal;
+}
+
 #img img {
 	display: block;
 	border-radius: 25px;
