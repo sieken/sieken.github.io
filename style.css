@@ -1,6 +1,6 @@
 body {
 	background-color: #f0f0f0;
-	font-family: 'Open Sans', sans-serif;
+  font-family: 'Source Code Pro';
 }
 
 #pres {
@@ -24,6 +24,7 @@ body {
 }
 
 #links {
+  font-size: 13px;
 	display: block;
 	width: auto;
 	margin: auto;
@@ -33,4 +34,12 @@ body {
 #links li { 
 	display: inline-block;
 	padding: 10px 15px 18px 15px
+}
+
+a {
+	color: #ef9500;
+}
+
+a:hover {
+	color: black;
 }
