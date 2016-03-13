@@ -1,0 +1,37 @@
+body {
+	background-color: #f0f0f0;
+	font-family: 'Open Sans', sans-serif;
+}
+
+#pres {
+	display: block;
+	width: 400px;
+	height: 200px;
+	margin: auto;
+	font-size: 14px;
+	text-align: center;
+}
+
+#img img {
+	display: block;
+	border-radius: 25px;
+	border: 0.5px solid black;
+	padding: 20px;
+	width: 75px;
+	height: 75px;
+	margin-top: 30px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#links {
+	display: block;
+	width: auto;
+	margin: auto;
+	text-align: center;
+}
+
+#links li { 
+	display: inline-block;
+	padding: 10px 15px 18px 15px
+}
