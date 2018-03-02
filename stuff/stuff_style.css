@@ -9,14 +9,14 @@ body {
 	padding-top: 50 px;
 }
 
-#title {
+#img {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	margin-top: 30px;
 }
 
-#title img {
+#img img {
 	display: block;
 	border-radius: 25px;
 	border: 0.5px solid black;
@@ -53,7 +53,7 @@ a {
 }
 
 a:hover {
-	color: black;
+	color: #ab7300;
 }
 
 #articles ul li:after {
@@ -101,7 +101,7 @@ article {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 21px;
 	font-weight: 200;
-	color: #111;
+	color: #ffffff;
 	text-align: center;
 	margin-right: 20%;
 	margin-left: 20%;
