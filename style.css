@@ -18,15 +18,19 @@ body {
 	font-weight: normal;
 }
 
+#img {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: 30px;
+}
+
 #img img {
 	display: block;
 	border-radius: 25px;
 	border: 0.5px solid black;
 	width: 95px;
 	height: 95px;
-	margin-top: 30px;
-	margin-left: auto;
-	margin-right: auto;
 }
 
 #links {
@@ -47,5 +51,5 @@ a {
 }
 
 a:hover {
-	color: black;
+	color: #ab7300;
 }
