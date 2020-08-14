@@ -1,18 +1,22 @@
 body {
-	background-color: #232323;
-	color: #ffffff;
 	font-family: 'Source Code Pro';
-	max-width: 400px;
+	color: #ffffff;
+	background-color: #232323;
+	max-width: 500px;
 	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 #pres {
 	display: block;
 	position: relative;
 	margin: auto;
-	font-size: 14px;
-	text-align: left;
-	margin: 40px 10px 100px 10px;
+	/* margin-bottom: 72vh; */
+	font-size: 1rem;
+	text-align: center;
+	margin: 20px 10px 100px 10px;
 }
 
 #header { text-align: center; }
@@ -36,20 +40,17 @@ body {
 	font-size: 13px;
 	display: block;
 	width: auto;
-	margin: 200px auto 20px auto;
 	text-align: center;
 }
 
-#links u { text-decoration: none; }
-#links li { 
-	display: inline-block;
-	padding: 10px 15px 18px 15px
+#links a {}
+#links .grid-wrapper {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	row-gap: 1rem;
 }
 
-a {
-	font-size: 1rem;
-	color: #ef9500;
-}
+a { font-size: .9rem; color: #ef9500; }
 a:hover { color: #ab7300; }
 
 #lolnerd {
@@ -57,4 +58,48 @@ a:hover { color: #ab7300; }
 	height: auto;
 	position: absolute;
 	right: 10%;
+}
+
+#cv h1 { text-align: center; }
+#cv .flex-container {
+	display: flex;
+	flex-direction: row;
+	width: inherit;
+}
+#cv div .resume-list { margin-left: 20px; margin-right: 20px; }
+#cv .description { font-size: .8rem; }
+#cv .time-period { font-size: .7rem; }
+#cv .inst-title { margin: 5px auto 5px auto; }
+
+#cv-arrow { display: none; }
+
+@keyframes float {
+	from { top: 63vh; }
+	50% { top: 62vh; }
+	to { top: 63vh; }
+}
+
+@media screen and (max-width: 499px) {
+	#cv .flex-container { max-width: 100vw; overflow-x: scroll; }
+	#pres { margin-bottom: 72vh; }
+	#cv-arrow {
+		display: block;
+		position: absolute;
+		top: 63vh;
+		left: calc(50vw - 3rem);
+		width: 0;
+		height: 3rem;
+		margin: 150px auto 20px auto;
+		border-left: 50px solid transparent;
+		border-right: 50px solid transparent;
+		border-top: 50px solid white;
+
+		animation: 2s infinite normal float;
+	}
+	#cv-arrow .triangle-text {
+		color: #232323;
+		position: absolute;
+		top: -2.7rem;
+		left: -0.6rem;
+	}
 }
