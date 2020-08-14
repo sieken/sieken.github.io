@@ -107,9 +107,9 @@ hr { width: 50%; font-weight: 1px; margin: 80px auto 60px auto; }
 #cv-arrow { display: none; }
 
 @keyframes float {
-	from { top: 63vh; }
-	50% { top: 62vh; }
-	to { top: 63vh; }
+	from { top: 55vh; }
+	50% { top: 54vh; }
+	to { top: 55vh; }
 }
 
 @media screen and (max-width: 499px) {
@@ -118,7 +118,7 @@ hr { width: 50%; font-weight: 1px; margin: 80px auto 60px auto; }
 	#cv-arrow {
 		display: block;
 		position: absolute;
-		top: 63vh;
+		top: 55vh;
 		left: calc(50vw - 3rem);
 		width: 0;
 		height: 3rem;
@@ -135,4 +135,7 @@ hr { width: 50%; font-weight: 1px; margin: 80px auto 60px auto; }
 		top: -2.7rem;
 		left: -0.6rem;
 	}
+	#cv-me { height: 70px; grid-template-rows: repeat(3, 20px); }
+	#cv-me img { width: 70px; height: auto; }
+	#cv-me p { font-size: .6rem; }
 }
