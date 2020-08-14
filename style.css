@@ -54,21 +54,54 @@ a { font-size: .9rem; color: #ef9500; }
 a:hover { color: #ab7300; }
 
 #lolnerd {
-	width: 100px;
+	width: 90px;
 	height: auto;
 	position: absolute;
 	right: 10%;
 }
 
-#cv h1 { text-align: center; }
+hr { width: 50%; font-weight: 1px; margin: 80px auto 60px auto; }
+
+#cv-header h1 { text-align: center; }
+#cv-me {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	grid-template-rows: repeat(3, 40px);
+	grid-template-areas:
+		"img name name"
+		"img mail mail"
+		"img phone phone"
+	;
+
+	margin: 20px auto 20px auto;
+}
+#cv-me img {
+	height: 120px;
+	width: auto;
+	justify-self: center;
+
+	border: 5px solid white;
+}
+#cv-me p { margin: 0px; align-self: center; }
+
 #cv .flex-container {
 	display: flex;
 	flex-direction: row;
 	width: inherit;
 }
 #cv div .resume-list { margin-left: 20px; margin-right: 20px; }
-#cv .description { font-size: .8rem; }
-#cv .time-period { font-size: .7rem; }
+#cv .description {
+	font-size: .8rem;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+#cv .location {
+	font-size: .6rem;
+	font-weight: bold;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+#cv .time-period { font-size: .6rem; }
 #cv .inst-title { margin: 5px auto 5px auto; }
 
 #cv-arrow { display: none; }
