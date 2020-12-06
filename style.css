@@ -20,7 +20,7 @@ section { margin: 30px auto 30px auto; max-width: 500px; }
 	text-align: center;
 	margin: 0px 10px 0px 10px;
 }
-#pres .second { margin-top: 110px; }
+#pres > img { opacity: 74%; }
 
 #header { text-align: center; }
 #header h1 { font-size: 16px; }
@@ -39,15 +39,32 @@ section { margin: 30px auto 30px auto; max-width: 500px; }
 	height: 95px;
 }
 
-#gallery { text-align: center; width: inherit; height: 600px; }
+#gallery { text-align: center; width: inherit; }
 #gallery .gallery-wrapper {
 	display: grid;
-	grid-template-columns: repeat(3, auto);
-	grid-template-rows: repeat(3, auto);
+	grid-template-columns: repeat(3, calc(500px / 3));
+	grid-template-rows: repeat(2, calc(500px / 2));
 }
-#gallery .gallery-item { margin: 5px; }
-#gallery .gallery-item img { width: 90px; height: auto; }
-#gallery .gallery-item p { font-size: .8rem; max-width: 99%;}
+#gallery .gallery-item {
+	margin: 5px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-areas:
+		"gimg gimg"
+		"gimg gimg"
+		"gdesc gdesc"
+	;
+}
+#gallery .gallery-image-container { width: 100%; max-height: 100%; grid-area: gimg; }
+#gallery img {
+	object-fit: cover;
+	width: inherit;
+	height: 100%;
+	max-height: 100%;
+	margin: auto 0px;
+}
+#gallery .gallery-item p { grid-area: gdesc; font-size: .8rem; max-width: 99%;}
 
 #links {
 	font-size: 13px;
@@ -67,11 +84,19 @@ section { margin: 30px auto 30px auto; max-width: 500px; }
 a { font-size: .9rem; color: #ef9500; }
 a:hover { color: #ab7300; }
 
+#underline {
+	width: 17rem;
+	height: 15px;
+	position: absolute;
+	top: 50px;
+	left: 140px;
+}
 #lolnerd {
-	width: 90px;
+	width: 70px;
 	height: auto;
 	position: absolute;
-	right: 10%;
+	top: 20px;
+	right: -80px;
 }
 
 hr { width: 50%; font-weight: 1px; margin: 80px auto 60px auto; }
@@ -143,6 +168,10 @@ hr { width: 50%; font-weight: 1px; margin: 80px auto 60px auto; }
 #cv .time-period { font-size: .6rem; }
 #cv .inst-title { margin: 5px auto 5px auto; }
 
+.triangle { }
+.square { width: 100px; height: 100px; background: #ffffff; }
+.circle {}
+
 @media screen and (max-width: 499px) {
 	h1, h2 { font-size: 1.2rem; }
 	#cv { width: inherit; margin-top: 30px; border: hidden; padding: 0px; }
@@ -150,4 +179,10 @@ hr { width: 50%; font-weight: 1px; margin: 80px auto 60px auto; }
 	#cv-me img { width: 70px; height: auto; }
 	#cv-me p { font-size: .6rem; }
 	#cv .grid-wrapper { display: block; max-width: auto; overflow-x: scroll; }
+	#underline { width: 17rem; top: 71px; left: 0px; }
+	#lolnerd { top: 100px; left: 1px; transform: rotate(30deg); }
+	#gallery .gallery-wrapper {
+		grid-template-columns: repeat(3, calc(100vw / 3));
+		grid-template-rows: repeat(3, calc(100vw / 3));
+	}
 }
